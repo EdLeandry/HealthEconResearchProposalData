@@ -1,6 +1,8 @@
 cd /Users/edwinleandry/Downloads/HealthEconResearch
 set maxvar 20000
 
+*Creating each data set to include variables needed
+
 *2001
 do FAM2001ER.do
 
