@@ -16,6 +16,7 @@ PSID2017 = read_stata("PSID2017.dta")
 PSID2019 = read_stata("PSID2019.dta")
 PSID2021 = read_stata("PSID2021.dta")
 
+#Renaming variables from newly made stata-cleaned data
 names(PSID2001) = c('PSIDStateCode', 'year', 'age', 'sex', '#chldn', 'respondent', '1968famid',
                     'married', 'employstatus', 'occupcode', 'salaryamt', 'hrlywagerate',
                     'cancerever', 'yrscancer', 'histatus', 'totalpaidinsprem', 'race', '#wksworked',
@@ -73,6 +74,7 @@ names(PSID2021) = c('PSIDStateCode','1968famid', 'year', 'age', 'sex', '#chldn',
 # PSID2019 = PSID2019[which(PSID2019$age >= 24 & PSID2019$age <= 64 ),]
 # PSID2021 = PSID2021[which(PSID2021$age >= 24 & PSID2021$age <= 64 ),]
 
+#Binding data together by row
 PSIDlist = list(PSID2001, PSID2003, PSID2005, PSID2007, PSID2009, PSID2011,
                 PSID2013, PSID2015, PSID2017, PSID2019, PSID2021)
 
